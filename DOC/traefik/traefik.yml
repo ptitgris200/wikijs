@@ -35,7 +35,6 @@ services:
        - "traefik.http.middlewares.modsecurity.plugin.traefik-modsecurity-plugin.JailTimeDurationSecs=600"
        - "traefik.http.middlewares.modsecurity.plugin.traefik-modsecurity-plugin.ModsecurityUrl=http://waf:8080"
        - "traefik.http.middlewares.modsecurity.plugin.traefik-modsecurity-plugin.TimeoutMillis=2000"
-
        - traefik.http.routers.traefik-public-http.rule=Host(`proxy.ptigris200.overthelog.com`)
        - traefik.http.routers.traefik-public-http.entrypoints=http
        - traefik.http.routers.traefik-public-http.middlewares=https-redirect
