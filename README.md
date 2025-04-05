@@ -9,3 +9,35 @@ soit un simple docker et ça vous installera le tout dans un dossier ptitgris200
 soit sur un docker swarm ou vous devrez adapter les contraintes les exemples seront donné pour un serveur docker mono-node mais avec le swarm activé pour la gestion des stack. 
 de telles conf sont aisément reportable sur une architecter avec des marster et des workers. 
 
+## comment le depot ptitgris200/wikijs :
+cloner le depot : 
+
+```
+git clone https://github.com/ptitgris200/wikijs.git
+
+```
+
+il y a deux Branches possibles a utiliser sans choix vous n'aurez que cette doc.
+
+liste des branches à choisir :
+
+docker-compose
+docker-swarm
+
+pour de ce faire utiliser la commande : 
+
+```
+# Basculer sur la branche docker-compose
+git checkout docker-compose
+
+# Basculer sur la branche docker-swarm
+git checkout docker-swarm
+```
+
+
+
+
+release note: 
+06/04/2025 initialisation du projet
+
+
