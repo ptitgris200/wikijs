@@ -34,10 +34,65 @@ git checkout docker-compose
 git checkout docker-swarm
 ```
 
+///////////////////////////////////////////////////////////////////////////////
+# wikijs
+## Deployment of a Wiki.js stack with two main branches: one for docker-compose and one for docker-swarm
+
+In this repository, I will provide you with everything you need to run your own Wiki.js in a Docker environment of your choice.
+
+- Either a simple Docker setup, which will install everything in a folder named `ptitgris200/wikijs`.
+
+- Or on a Docker Swarm, where you will need to adapt the constraints. The examples provided will be for a single-node Docker server but with Swarm enabled for stack management. Such configurations can easily be adapted to an architecture with masters and workers.
+
+## How to use the repository ptitgris200/wikijs:
+Clone the repository:
+
+
+```
+git clone https://github.com/ptitgris200/wikijs.git
+
+```
+
+
+There are two possible branches to use; without making a choice, you will only have this documentation.
+
+List of branches to choose from:
+
+- docker-compose
+- docker-swarm
+
+To switch to one of these branches, use the following commands:
+
+
+```
+# Switch to the docker-compose branch
+git checkout docker-compose
+
+# Switch to the docker-swarm branch
+git checkout docker-swarm
+```
+
+
+enjoy using ptitgris200/wikijs !
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 release note: 
-06/04/2025 initialisation du projet
-
+06/04/2025-0 initialisation du projet
+06/04/2025-1 traduction en anglais
 
