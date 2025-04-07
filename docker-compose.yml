@@ -1,0 +1,85 @@
+services:
+  wikijs:
+    image: requarks/wiki:latest
+    environment:
+      - DB_TYPE=postgres
+      - DB_HOST=wikidb
+      - DB_PORT=5432
+      - DB_NAME=wikijsdb
+      - DB_USER=wikijs
+      - DB_PASS=lemdpd3t3stdef0lIe
+    ports:
+      - 3000:80
+    networks:
+      - net
+
+
+  wikidb:
+    image: postgres:11-alpine
+    environment:
+      POSTGRES_DB: wikijsdb
+      POSTGRES_PASSWORD: lemdpd3t3stdef0lIe
+      POSTGRES_USER: wikijs
+    logging:
+      driver: "none"
+    restart: unless-stopped
+    networks:
+      - net
+    volumes:
+      - /data/webs/wikijs/database:/var/lib/postgresql/data
+      
+
+
+
+
+
+#    image: mariadb:10.5.8
+#    command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+#    networks:
+#      # Use the public network created to be shared between Traefik and
+#      # any other service that needs to be publicly available with HTTPS
+#      - net
+#    ports:
+#      - 3306
+#    deploy:
+#      placement:
+#        constraints: [node.role == manager]
+#      mode: "replicated"
+#      replicas: 1
+#      update_config:
+#        parallelism: 1
+#        delay: 10s
+#      restart_policy:
+#        condition: on-failure
+#        delay: 10s
+#        max_attempts: 3
+#        window: 120s
+#      resources:
+#        limits:
+#          cpus: '2'
+#          memory: 2G
+#        reservations:
+#          cpus: '0.1'
+#          memory: 64M
+#    volumes:
+#      - /data/webs/wikijs/database:/var/lib/mysql
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=jjHsoS46U6nZsZgGPoz
+#      - MYSQL_USER=wikijs
+#      - MYSQL_PASSWORD=lemdpd3t3stdef0lIe
+#      - MYSQL_DATABASE=wikijsdb
+
+
+
+
+
+
+
+networks:
+  # Use the previously created public network "traefik-public", shared with other
+        # services that need to be publicly available via this Traefik
+  net:
+    driver: overlay
+  traefik-public:
+    external: true
+
