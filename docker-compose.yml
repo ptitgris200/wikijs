@@ -28,6 +28,36 @@ services:
     volumes:
       - /data/webs/wikijs/database:/var/lib/postgresql/data
 
+## test de l'ajout de matomo test de github copilot
+# Uncomment the following section to enable Matomo integration
+#
+#  matomo:
+#    image: matomo:latest
+#    environment:
+#      - MATOMO_DATABASE_HOST=matomodb
+#      - MATOMO_DATABASE_ADAPTER=mysql
+#      - MATOMO_DATABASE_TABLES_PREFIX=matomo_
+#      - MATOMO_DATABASE_USERNAME=matomo
+#      - MATOMO_DATABASE_PASSWORD=securepassword
+#      - MATOMO_DATABASE_DBNAME=matomodb
+#    ports:
+#      - 8080:80 # Expose Matomo on 0.0.0.0:8080
+#    networks:
+#      - net
+#      - public
+#  matomodb:
+#    image: mariadb:10.5
+#    environment:
+#      MYSQL_ROOT_PASSWORD=securepassword
+#      MYSQL_DATABASE=matomodb
+#      MYSQL_USER=matomo
+#      MYSQL_PASSWORD=securepassword
+#    volumes:
+#      - /data/webs/matomo/database:/var/lib/mysql
+#    networks:
+#      - net
+
+
 networks:
   net:
     driver: bridge # reseau interne entre wikijs et wikidb
