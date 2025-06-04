@@ -7,9 +7,9 @@ sur ce dépot je vais vous fournir de quoi vous faire tourner votre propre wikij
 soit un simple docker et ça vous installera le tout dans un dossier ptitgris200/wikijs
 
 soit sur un docker swarm ou vous devrez adapter les contraintes les exemples seront donné pour un serveur docker mono-node mais avec le swarm activé pour la gestion des stack. 
-de telles conf sont aisément reportable sur une architecter avec des marster et des workers. 
+de telles conf sont aisément reportable sur une architecturre avec des master et des workers. 
 
-## comment le depot ptitgris200/wikijs :
+## comment fonctionne le depot ptitgris200/wikijs :
 cloner le depot : 
 
 ```
